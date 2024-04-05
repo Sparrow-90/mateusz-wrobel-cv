@@ -35,16 +35,16 @@ const cvData: CVData = {
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <main className="cv-main">
-      <header>
+      <header className='cv-header'>
         <h1>CV {cvData.name} {cvData.lastName}</h1>
       </header>
-      <aside>
+      <aside className='cv-personal'>
         <h2>Personal data</h2>
-        <img src={cvData.photo} alt={`${cvData.name} ${cvData.lastName} zdjęcie profilowe`} />
+        <img className='cv-photo' src={cvData.photo} alt={`${cvData.name} ${cvData.lastName} zdjęcie profilowe`} />
         <p>{cvData.name} {cvData.lastName}</p>
         <p>{cvData.position}</p>
       </aside>
-      <section>
+      <section className='cv-details'>
         <h2>Experience</h2>
         <ul>
           {cvData.experience.map(experience => (
